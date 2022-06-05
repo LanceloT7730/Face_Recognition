@@ -6,7 +6,7 @@ def face_verify(img_1, img_2):
         result_dict = DeepFace.verify(img1_path=img_1, img2_path=img_2)
 
         with open('result.json', 'w') as file:
-            json.dump(result_dict, file, indent=4, ensure_ascii=False)
+            json.dump(result_dict, indent=4, ensure_ascii=False)
 
         # return result_dict
 
@@ -19,7 +19,7 @@ def face_verify(img_1, img_2):
 
 def face_recogn():
     try:
-        result = DeepFace.find(img_path='faces/em2.jpg', db_path='Emilia')
+        result = DeepFace.find(img_path='faces/downey1.jpg.jpg', db_path='Emilia')
         result = result.values.tolist()
         return result
 
@@ -27,9 +27,9 @@ def face_recogn():
         return _ex
 
 def main():
-    #print(face_verify(img_1='faces/em3.jpg', img_2='faces/em2.jpg'))
-    print(face_verify(img_1='faces/steve_jobs_young.jpg', img_2='faces/steve_jobs_old.jpg'))
-    print(face_recogn())
+    #print(face_verify(img_1='faces/em1.jpg', img_2='faces/snoop.jpg'))
+    #print(face_recogn())
+    print('Hello world!')
 
 if __name__ == '__main__':
     main()
