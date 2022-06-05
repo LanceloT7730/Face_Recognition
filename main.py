@@ -27,7 +27,7 @@ def face_recogn():
         return _ex
 
 def main():
-    # print(face_verify(img_1='faces/em1.jpeg', img_2='faces/snoop.jpg'))
+    print(face_verify(img_1='faces/em1.jpeg', img_2='faces/snoop.jpg'))
     print(face_recogn())
 
 if __name__ == '__main__':
